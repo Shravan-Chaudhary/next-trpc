@@ -1,7 +1,7 @@
 import { publicProcedure, router } from "./trpc";
 export const appRouter = router({
   getTodos: publicProcedure.query(async () => {
-    return [10, 20, 30];
+    return "Hello from trpc server";
   }),
 });
 // Export type router type signature,
@@ -9,3 +9,4 @@ export const appRouter = router({
 export type AppRouter = typeof appRouter;
 
 // TODO Flowchart of explaining rpc call
+// TODO setup zod
